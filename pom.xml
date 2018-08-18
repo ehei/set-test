@@ -1,21 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!--
-  ~ -------------------------- AUTONOMIC PROPRIETARY 1.0 --------------------------
-  ~
-  ~ Copyright (c) 2017 - 2018 Autonomic Incorporated - All rights reserved
-  ~
-  ~ Proprietary and confidential.
-  ~
-  ~ NOTICE:  All information contained herein is, and remains the property of
-  ~ Autonomic Incorporated and its suppliers, if any.  The intellectual and
-  ~ technical concepts contained herein are proprietary to Autonomic Incorporated
-  ~ and its suppliers and may be covered by U.S. and Foreign Patents, patents in
-  ~ process, and are protected by trade secret or copyright law. Dissemination of
-  ~ this information or reproduction of this material is strictly forbidden unless
-  ~ prior written permission is obtained from Autonomic Incorporated.
-  ~
-  -->
-
 <project xmlns="http://maven.apache.org/POM/4.0.0"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
@@ -25,20 +7,22 @@
   <artifactId>set-test</artifactId>
   <version>1.0-SNAPSHOT</version>
 
+  <properties>
+    <assertj.version>3.10.0</assertj.version>
+  </properties>
+
   <dependencies>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>4.12</version>
-      <scope>test</scope>
-    </dependency>
     <dependency>
       <groupId>org.assertj</groupId>
       <artifactId>assertj-core</artifactId>
-      <version>3.10.0</version>
-      <type>bundle</type>
-      <scope>test</scope>
+      <version>${assertj.version}</version>
     </dependency>
+      <dependency>
+        <groupId>junit</groupId>
+        <artifactId>junit</artifactId>
+        <version>4.12</version>
+        <scope>test</scope>
+      </dependency>
   </dependencies>
 
 </project>
